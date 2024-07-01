@@ -22,7 +22,18 @@
 
 <body>
 
-<!-- Contenuto HTML -->
+    <div id="app" class="container"> <!-- Istanza Vue 3 -->
+        <h1>Todo List</h1>
+        <div class="add-todo">
+            <input type="text" v-model="newTodo" placeholder="New Todo">
+            <button @click="addTodo">Add</button>
+        </div>
+        <div v-for="(todo, index) in todos" :key="index" class="todo-item">
+            <input type="checkbox" v-model="todo.completed">
+            <span :class="{ completed: todo.completed }">{{ todo.text }}</span>
+            <button @click="deleteTodo(index)">Delete</button>
+        </div>
+    </div>  <!-- Chiusura istanza Vue 3 -->
 
 </body>
 
