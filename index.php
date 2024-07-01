@@ -35,6 +35,9 @@
         </div>
     </div>  <!-- Chiusura istanza Vue 3 -->
 
+
+    <!-- Collegamento JS (Vue3) -->
+     <script src="./main.js"></script>
 </body>
 
 </html>
